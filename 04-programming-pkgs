@@ -1,17 +1,18 @@
 #!/bin/bash
 
 echo "Installing the following programming packages:"
-pkgs="r rstudio-desktop-bin openblas-lapack rstudio-server-bin linux419-nvidia nvidia-utils cuda cudnn"
+pkgs="r rstudio-desktop-bin openblas-lapack rstudio-server-bin ruby ruby-rdoc linux419-nvidia nvidia-utils cuda cudnn"
 echo $pkgs
 yaourt -S $pkgs --noconfirm
 
 sudo rstudio-server start
 sudo systemctl enable rstudio-server
+gem update --user-install
+gem install jekyll --user-install
+echo "add $HOME/.gem/ruby/2.5.0/bin to your PATH variable"
 echo "export PATH to bashrc"
 echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"  >> ~/.bashrc
-echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
 source ~/.bashrc
 
 echo "Checking cuda and cudnn versions:"
