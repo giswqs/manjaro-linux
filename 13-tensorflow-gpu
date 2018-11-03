@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "Installing tensorflow-gpu ..."
+source activate py36
+cd $HOME/Downloads/
+sudo pip install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+
+echo "Installation finished!"

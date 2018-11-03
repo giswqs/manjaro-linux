@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing the following programming packages:"
-pkgs="r rstudio-desktop-bin openblas-lapack rstudio-server-bin ruby ruby-rdoc"
+pkgs="r rstudio-desktop-bin rstudio-server-bin ruby ruby-rdoc"
 echo $pkgs
 yaourt -S $pkgs --noconfirm
 
