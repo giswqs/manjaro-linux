@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Installing the following optional packages:"
+
+pkgs="calibre gimp gscan2pdf inkscape libreoffice-extension-languagetool masterpdfeditor remmina pdfstudio skypeforlinux-stable-bin teamviewer ttf-ms-fonts visual-studio-code-bin electronic-wechat"
+
+echo $pkgs
+
+yaourt -S $pkgs --noconfirm
+
+sudo teamviewer --daemon enable
+sudo systemctl enable teamviewerd
+
+echo "Installation finished!"

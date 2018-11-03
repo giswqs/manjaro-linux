@@ -1,0 +1,16 @@
+#!/bin/bash
+sudo pacman-mirrors --country United_States
+sudo pacman-mirrors -f 0
+sudo pacman -Syyu --noconfirm
+sudo pacman -S yaourt --noconfirm
+yaourt -Syyua --noconfirm
+sudo pacman -Sy base-devel --noconfirm
+sudo pacman -S linux419-headers --noconfirm
+sudo pacman -S timeshift --noconfirm
+sudo pacman -S gnome-disk-utility --noconfirm
+sudo mkdir -p /media/hdd
+sudo chmod -R 777 /media/hdd
+echo "System Settings - Hardware Configuration - Install video-nvidia"
+nvidia-smi
+echo "Backup system using timeshift"
+echo "mount hard drive to /media/hdd using gnome-disk-utility"

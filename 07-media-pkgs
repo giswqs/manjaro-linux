@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Installing the following media packages:"
+
+gpg --recv-key B3C7CE210DE76DFC
+
+pkgs="plex-media-server"
+
+echo $pkgs
+
+yaourt -S $pkgs --noconfirm
+
+sudo systemctl enable plexmediaserver && sudo systemctl start plexmediaserver
+
+echo "Installation finished!"

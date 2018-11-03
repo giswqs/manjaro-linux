@@ -1,0 +1,47 @@
+#!/bin/bash
+
+echo "Installing the following programming packages:"
+pkgs="r rstudio-desktop-bin openblas-lapack rstudio-server-bin linux419-nvidia nvidia-utils cuda cudnn"
+echo $pkgs
+yaourt -S $pkgs --noconfirm
+
+sudo rstudio-server start
+sudo systemctl enable rstudio-server
+echo "export PATH to bashrc"
+echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"  >> ~/.bashrc
+echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
+echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}" >> ~/.bashrc
+source ~/.bashrc
+
+echo "Checking cuda and cudnn versions:"
+sudo ldconfig
+sudo mhwd -a pci nonfree 0300
+nvidia-smi
+nvcc --version
+cat /opt/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
+
+echo "Ignore packages upgrade ..."
+sudo echo "IgnorePkg = cudnn cuda linux419-nvidia" >> /etc/pacman.conf
+
+echo "Installing Anaconda ..."
+yaourt -S anaconda --noconfirm
+echo "export PATH=$PATH:/opt/anaconda/bin" >> ~/.bashrc
+source ~/.bashrc
+anaconda --version && conda --version
+
+echo "Installing PyCharm ..."
+yaourt -S pycharm-professional --noconfirm
+sudo chmod 777 -R /opt/pycharm-professional/
+
+echo "Creating conda environment ..."
+yaourt -S cmake git unzip zip bazel --noconfirm
+conda create -n py36 python=3.6
+conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py --name py36
+
+echo "Installing tensorflow-gpu ..."
+source activate py36
+cd $HOME/Downloads/
+sudo pip install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+
+echo "Installation finished!"

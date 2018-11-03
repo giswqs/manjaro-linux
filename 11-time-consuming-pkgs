@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Installing the following optional packages:"
+
+pkgs="pithos pdfchain"
+
+echo $pkgs
+
+yaourt -S $pkgs --noconfirm
+
+echo "Installation finished!"

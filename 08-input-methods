@@ -1,0 +1,16 @@
+#!/bin/bash
+
+echo "Installing input methods ..."
+
+pkgs="adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts fcitx kcm-fcitx fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 fcitx-ui-light fcitx-table-other"
+
+echo $pkgs
+
+yaourt -S $pkgs --noconfirm
+
+touch ~/.xprofile
+echo "export GTK_IM_MODULE=fcitx" >> ~/.xprofile
+echo "export QT_IM_MODULE=fcitx" >> ~/.xprofile
+echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
+
+echo "Installation finished!"
