@@ -1,5 +1,9 @@
 # manjaro-linux
-Shell scripts for setting up [Manjaro Linux](https://manjaro.org/get-manjaro/) for Python programming and deep learning
+[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+**Shell scripts for setting up [Manjaro Linux](https://manjaro.org/get-manjaro/) for Python programming and deep learning**
+
+Author: Qiusheng Wu (https://wetlands.io | wqs@binghamton.edu)
 
 ## How to use these shell scripts?
 
