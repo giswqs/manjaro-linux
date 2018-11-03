@@ -1,5 +1,5 @@
 # manjaro-linux
-Shell scripts for setting up Manjaro Linux for Python programming and deep learning
+Shell scripts for setting up [Manjaro Linux](https://manjaro.org/get-manjaro/) for Python programming and deep learning
 
 ## How to use these shell scripts?
 
