@@ -1,13 +1,13 @@
 #!/bin/bash
 
 echo "Installing virtualbox ..."
-yaourt -S virtualbox linux419-virtualbox-host-modules virtualbox-ext-oracle --noconfirm
+yay -S virtualbox linux419-virtualbox-host-modules virtualbox-ext-oracle --noconfirm
 sudo /sbin/rcvboxdrv setup
 sudo gpasswd -a $USER vboxusers
 
 
 echo "Installing crossover ..."
-yaourt -S lib32-libxcomposite lib32-libcups lib32-nss-mdns --noconfirm
-yaourt -S crossover --noconfirm
+yay -S lib32-libxcomposite lib32-libcups lib32-nss-mdns --noconfirm
+yay -S crossover --noconfirm
 
 echo "Installation finished."

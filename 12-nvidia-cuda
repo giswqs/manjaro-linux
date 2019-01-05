@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "Installing the following programming packages:"
-pkgs="linux419-nvidia nvidia-utils cuda cudnn"
+echo "Installing cuda and cudnn ..."
+# pkgs="linux419-nvidia nvidia-utils cuda cudnn"
+pkgs="cuda cudnn"
 echo $pkgs
-yaourt -S $pkgs --noconfirm
+yay -S $pkgs --noconfirm
 
 echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
 echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"  >> ~/.bashrc
@@ -11,7 +12,7 @@ source ~/.bashrc
 
 echo "Checking cuda and cudnn versions:"
 sudo ldconfig
-sudo mhwd -a pci nonfree 0300
+# sudo mhwd -a pci nonfree 0300
 nvidia-smi
 nvcc --version
 cat /opt/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2

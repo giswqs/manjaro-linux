@@ -1,15 +1,20 @@
 #!/bin/bash
 
-echo "alias up='yaourt -Syyua'"  >> ~/.bashrc
-echo "alias ug='yaourt -Sua --noconfirm'" >> ~/.bashrc
+echo "alias up='yay -Syyua'"  >> ~/.bashrc
+echo "alias ug='yay -Sua --noconfirm'" >> ~/.bashrc
 echo "alias py36='source activate py36'" >> ~/.bashrc
 echo "alias py27='source activate py27'" >> ~/.bashrc
+echo "alias pygeo='source activate pygeo'" >> ~/.bashrc
 echo "alias pytest='source activate pytest'" >> ~/.bashrc
 echo "alias arcgis='source activate arcgis'" >> ~/.bashrc
 echo "alias nb='jupyter notebook'" >> ~/.bashrc
 echo "alias pdf2doc='soffice --infilter=\"writer_pdf_import\" --convert-to doc'" >> ~/.bashrc
 echo "alias touchall='find  -type f  -exec touch {} +'" >> ~/.bashrc
 echo "alias jk='jekyll serve --watch --port 8000'" >> ~/.bashrc
+echo "alias hi='function hdi(){ howdoi $* -c -n 5; }; hdi'" >> ~/.bashrc
+echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
+echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
+# echo "alias touchall='find  -exec touch {} +'" >> ~/.bashrc
 # alias unzipall='for i in *.zip; do unzip "$i" -d "${i%%.zip}"; done'
 #echo "Ignore packages upgrade ..."
 #sudo echo "IgnorePkg = cudnn cuda linux414-nvidia linux415-nvidia" >> /etc/pacman.conf

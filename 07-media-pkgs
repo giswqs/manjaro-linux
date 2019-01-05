@@ -8,7 +8,7 @@ pkgs="plex-media-server"
 
 echo $pkgs
 
-yaourt -S $pkgs --noconfirm
+yay -S $pkgs --noconfirm
 
 sudo systemctl enable plexmediaserver && sudo systemctl start plexmediaserver
 

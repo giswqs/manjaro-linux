@@ -1,12 +1,14 @@
 #!/bin/bash
 
+sudo usermod -a -G sys qiusheng
+
 echo "Installing printer drivers ..."
 
 pkgs="brscan-skey brscan4"
 
 echo $pkgs
 
-yaourt -S $pkgs --noconfirm
+yay -S $pkgs --noconfirm
 
 #sudo brsaneconfig4 -a name=Brother-Printer model=Brother HL-2280DW ip=192.168.1.231
 

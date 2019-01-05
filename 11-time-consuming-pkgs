@@ -6,6 +6,6 @@ pkgs="pithos pdfchain"
 
 echo $pkgs
 
-yaourt -S $pkgs --noconfirm
+yay -S $pkgs --noconfirm
 
 echo "Installation finished!"

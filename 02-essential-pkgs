@@ -2,10 +2,10 @@
 
 echo "Installing the following essential packages:"
 
-pkgs="anydesk debtap filezilla geary gedit google-chrome gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher peek pinta stacer gcc-fortran"
+pkgs="anydesk debtap filezilla geary gedit google-chrome gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher peek pinta krdc stacer gcc-fortran"
 
 echo $pkgs
 
-yaourt -S $pkgs --noconfirm
+yay -S $pkgs --noconfirm
 
 echo "Installation finished!"

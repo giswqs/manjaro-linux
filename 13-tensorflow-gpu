@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo "Installing tensorflow-gpu ..."
-source activate py36
-cd $HOME/Downloads/
-sudo pip install tensorflow-1.10.0-cp36-cp36m-linux_x86_64.whl
+echo "Installing tensorflow-gpu for cuda-10.0 and cudnn-7.3.0 ..."
+yay -S python-tensorflow-cuda
+# source activate py36
+# cd $HOME/Downloads/
+# wget http://spatial.binghamton.edu/files/public/tensorflow-1.12.0rc2-cp36-cp36m-linux_x86_64.whl
+# pip install tensorflow-1.12.0rc2-cp36-cp36m-linux_x86_64.whl
 
 echo "Installation finished!"
