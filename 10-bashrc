@@ -14,8 +14,11 @@ echo "alias jk='jekyll serve --watch --port 8000'" >> ~/.bashrc
 echo "alias hi='function hdi(){ howdoi $* -c -n 5; }; hdi'" >> ~/.bashrc
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
-# echo "alias touchall='find  -exec touch {} +'" >> ~/.bashrc
+echo "alias lf='du -ah . | grep -v \"/$\" | sort -h'" >> ~/.bashrc
+echo "alias ld='du -a -h --max-depth=1 | sort -h'" >> ~/.bashrc
+# echo "alias unzipall='for i in *.zip; do unzip \"$i\" -d \"${i%%.zip}\"; done'" >> ~/.bashrc
 # alias unzipall='for i in *.zip; do unzip "$i" -d "${i%%.zip}"; done'
+# echo "alias touchall='find  -exec touch {} +'" >> ~/.bashrc
 #echo "Ignore packages upgrade ..."
 #sudo echo "IgnorePkg = cudnn cuda linux414-nvidia linux415-nvidia" >> /etc/pacman.conf
 source ~/.bashrc
