@@ -2,7 +2,7 @@
 
 echo "Installing the following optional packages:"
 
-pkgs="pithos pdfchain"
+pkgs="pithos pdfchain pdfstudio"
 
 echo $pkgs
 
