@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing cuda and cudnn ..."
-# pkgs="linux419-nvidia nvidia-utils cuda cudnn"
+# pkgs="linux50-nvidia nvidia-utils cuda cudnn"
 pkgs="cuda cudnn"
 echo $pkgs
 yay -S $pkgs --noconfirm
@@ -18,6 +18,6 @@ nvcc --version
 cat /opt/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 
 # echo "Ignore packages upgrade ..."
-# sudo echo "IgnorePkg = cudnn cuda linux419-nvidia" >> /etc/pacman.conf
+# sudo echo "IgnorePkg = cudnn cuda linux50-nvidia" >> /etc/pacman.conf
 
 echo "Installation finished!"

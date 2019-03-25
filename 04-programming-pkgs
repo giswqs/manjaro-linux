@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing video driver"
-yay -S linux419-nvidia nvidia-utils --noconfirm  
+yay -S linux50-nvidia nvidia-utils --noconfirm  
 nvidia-smi
 
 yay -S cuda cudnn --noconfirm  

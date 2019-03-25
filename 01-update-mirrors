@@ -5,7 +5,7 @@ sudo pacman -S yay pamac --noconfirm
 yay -Syyua --noconfirm
 
 yay -Sy base-devel --noconfirm
-yay -S linux419-headers timeshift gnome-disk-utility stacer-bin --noconfirm
+yay -S linux50-headers timeshift gnome-disk-utility stacer-bin --noconfirm
 
 sudo mkdir -p /media/hdd
 sudo chmod -R 777 /media/hdd
