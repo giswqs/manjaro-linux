@@ -14,8 +14,10 @@ echo "alias jk='jekyll serve --watch --port 8000'" >> ~/.bashrc
 echo "alias hi='function hdi(){ howdoi $* -c -n 5; }; hdi'" >> ~/.bashrc
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
-echo "alias lf='du -ah . | grep -v \"/$\" | sort -h'" >> ~/.bashrc
+echo "alias la='du -ah . | grep -v \"/$\" | sort -h'" >> ~/.bashrc
 echo "alias ld='du -a -h --max-depth=1 | sort -h'" >> ~/.bashrc
+echo "alias lf='ls -1Rhs | sed -e \"s/^ *//\" | grep \"^[0-9]\" | sort -h'" >> ~/.bashrc
+# alias listfiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -h'
 # echo "alias unzipall='for i in *.zip; do unzip \"$i\" -d \"${i%%.zip}\"; done'" >> ~/.bashrc
 # alias unzipall='for i in *.zip; do unzip "$i" -d "${i%%.zip}"; done'
 # echo "alias touchall='find  -exec touch {} +'" >> ~/.bashrc
