@@ -12,4 +12,11 @@ yay -S $pkgs --noconfirm
 sudo sysctl kernel.unprivileged_userns_clone=1
 echo kernel.unprivileged_userns_clone = 1 | sudo tee /etc/sysctl.d/00-local-userns.conf
 
+echo "sudo sysctl fs.inotify.max_user_instances=256" > ./30-dropbox.conf
+echo "sudo sysctl fs.inotify.max_user_watches=1048576" >> ./30-dropbox.conf
+echo "sudo sysctl fs.inotify.max_user_instances=256" > ./50-max_user_watches.conf
+echo "sudo sysctl fs.inotify.max_user_watches=1048576" >> ./50-max_user_watches.conf
+sudo mv ./30-dropbox.conf /etc/sysctl.d/30-dropbox.conf
+sudo mv ./50-max_user_watches.conf /etc/sysctl.d/50-max_user_watches.conf
+
 echo "Installation finished!"
