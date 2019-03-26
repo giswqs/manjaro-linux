@@ -8,4 +8,8 @@ echo $pkgs
 
 yay -S $pkgs --noconfirm
 
+# disable brave browser message
+sudo sysctl kernel.unprivileged_userns_clone=1
+echo kernel.unprivileged_userns_clone = 1 | sudo tee /etc/sysctl.d/00-local-userns.conf
+
 echo "Installation finished!"
