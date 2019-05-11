@@ -2,7 +2,7 @@
 
 echo "Installing the following essential packages:"
 
-pkgs="anydesk debtap filezilla mailspring gedit google-chrome brave gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher peek pinta krdc dropbox insync graveman k3b furiusisomount gcc-fortran"
+pkgs="anydesk debtap filezilla mailspring gedit google-chrome brave gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher peek pinta krdc dropbox insync kio-gdrive onedrive graveman k3b furiusisomount gcc-fortran"
 
 echo $pkgs
 
