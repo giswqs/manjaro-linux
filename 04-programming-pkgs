@@ -1,16 +1,5 @@
 #!/bin/bash
 
-echo "Installing video driver"
-yay -S linux50-nvidia nvidia-utils --noconfirm  
-nvidia-smi
-
-yay -S cuda cudnn --noconfirm  
-echo "export PATH=/opt/cuda/bin${PATH:+:${PATH}}" >> ~/.bashrc
-echo "export LD_LIBRARY_PATH=/opt/cuda/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}"  >> ~/.bashrc
-source ~/.bashrc
-
-yay -S python-tensorflow-cuda
-
 echo "Installing the following programming packages:"
 pkgs="r rstudio-desktop-bin rstudio-server-bin ruby ruby-rdoc visual-studio-code-bin bazel"
 echo $pkgs
@@ -39,13 +28,13 @@ yay -S pycharm-professional --noconfirm
 sudo chmod 777 -R /opt/pycharm-professional/
 
 echo "Creating conda environment ..."
-conda create -n py36 python=3.6 -y
-source activate py36
-conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py36
-ipython kernel install --user --name="py36"
+conda create -n py37 python=3.7 -y
+conda activate py37
+conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py37
+ipython kernel install --user --name="py37"
 
 conda create -n py27 python=2.7 -y
-source activate py27
+conda activate py27
 conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py27
 ipython kernel install --user --name="py27"
 

@@ -2,11 +2,11 @@
 
 echo "alias up='yay -Syyua'"  >> ~/.bashrc
 echo "alias ug='yay -Sua --noconfirm'" >> ~/.bashrc
-echo "alias py36='source activate py36'" >> ~/.bashrc
-echo "alias py27='source activate py27'" >> ~/.bashrc
-echo "alias pygeo='source activate pygeo'" >> ~/.bashrc
-echo "alias pytest='source activate pytest'" >> ~/.bashrc
-echo "alias arcgis='source activate arcgis'" >> ~/.bashrc
+echo "alias py37='conda activate py37'" >> ~/.bashrc
+echo "alias py27='conda activate py27'" >> ~/.bashrc
+echo "alias pygeo='conda activate pygeo'" >> ~/.bashrc
+echo "alias pytest='conda activate pytest'" >> ~/.bashrc
+echo "alias arcgis='conda activate arcgis'" >> ~/.bashrc
 echo "alias nb='jupyter notebook'" >> ~/.bashrc
 echo "alias pdf2doc='soffice --infilter=\"writer_pdf_import\" --convert-to doc'" >> ~/.bashrc
 echo "alias touchall='find  -type f  -exec touch {} +'" >> ~/.bashrc

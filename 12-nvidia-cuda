@@ -1,5 +1,9 @@
 #!/bin/bash
 
+echo "Installing video driver"
+yay -S linux50-nvidia nvidia-utils --noconfirm  
+nvidia-smi
+
 echo "Installing cuda and cudnn ..."
 # pkgs="linux50-nvidia nvidia-utils cuda cudnn"
 pkgs="cuda cudnn"
