@@ -3,7 +3,7 @@
 
 **Shell scripts for setting up [Manjaro Linux](https://manjaro.org/get-manjaro/) for Python programming and deep learning**
 
-Author: Qiusheng Wu (https://wetlands.io | wqs@binghamton.edu)
+Author: Qiusheng Wu (https://wetlands.io | https://lidarblog.com)
 
 ## How to use these shell scripts?
 
