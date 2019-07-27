@@ -2,7 +2,7 @@
 
 echo "Installing the following optional packages:"
 
-pkgs="calibre gimp gscan2pdf pdfarranger moonshiner inkscape xnconvert libreoffice-extension-languagetool mathpix-snipping-tool masterpdfeditor-free remmina skypeforlinux-stable-bin teamviewer ttf-ms-fonts electronic-wechat variety"
+pkgs="calibre gimp krita gscan2pdf pdfarranger moonshiner inkscape xnconvert libreoffice-extension-languagetool mathpix-snipping-tool masterpdfeditor-free remmina skypeforlinux-stable-bin teamviewer ttf-ms-fonts electronic-wechat variety"
 
 echo $pkgs
 
