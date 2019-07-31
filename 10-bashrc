@@ -11,7 +11,7 @@ echo "alias nb='jupyter notebook'" >> ~/.bashrc
 echo "alias pdf2doc='soffice --infilter=\"writer_pdf_import\" --convert-to doc'" >> ~/.bashrc
 echo "alias touchall='find  -type f  -exec touch {} +'" >> ~/.bashrc
 echo "alias jk='jekyll serve --watch --port 8000'" >> ~/.bashrc
-echo "alias hi='function hdi(){ howdoi $* -c -n 5; }; hdi'" >> ~/.bashrc
+echo "alias hi='function hdi(){ howdoi \$* -c -n 5; }; hdi'" >> ~/.bashrc
 echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
 echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
 echo "alias la='du -ah . | grep -v \"/$\" | sort -h'" >> ~/.bashrc
