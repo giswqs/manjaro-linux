@@ -29,7 +29,7 @@ Author: Qiusheng Wu (https://wetlands.io | https://lidarblog.com)
 - ISO files: etcher furiusisomount
 - Image editor: gimp pinta krita
 - Vector editor: inkscape
-- Screen recorder: peek
+- Screen recorder: peek flameshot
 - PDF editor: masterpdfeditor-free gscan2pdf pdfarranger moonshiner pdfchain
 - Chat: skypeforlinux-stable-bin electronic-wechat zoom
 - Wallpaper: variety
