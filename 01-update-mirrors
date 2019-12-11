@@ -20,6 +20,6 @@ echo "System Settings - Workspace Theme -- Look And Feel - Arc Dark"
 echo "Backup system using timeshift"
 
 yay -Sy base-devel --noconfirm
-yay -S linux53 linux53-headers --noconfirm
+yay -S linux54 linux54-headers --noconfirm
 
 
