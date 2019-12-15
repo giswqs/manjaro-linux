@@ -10,3 +10,9 @@ yay -S python-tensorflow-cuda
 # print(sess.run(hello))
 
 echo "Installation finished!"
+
+echo "Creating conda environment ..."
+conda create -n dl python=3.7 -y
+conda activate dl
+conda install tensorflow-gpu keras pytorch torchvision cudatoolkit notebook ipykernel -y --name dl
+ipython kernel install --user --name="dl"
