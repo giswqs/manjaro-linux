@@ -2,7 +2,7 @@
 
 echo "Installing the following GIS packages:"
 
-pkgs="python-owslib python-jinja-time python-pygments-markdown-lexer python-psycopg2 python-gdal python-numpy whitebox google-earth qgis saga-gis"
+pkgs="python-owslib python-jinja-time python-pygments-markdown-lexer python-psycopg2 python-gdal python-numpy google-earth-pro qgis"
 
 echo $pkgs
 
