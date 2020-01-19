@@ -3,12 +3,6 @@
 echo "Installing tensorflow-gpu for cuda and cudnn ..."
 yay -S python-tensorflow-cuda
 
-# test tensorflow
-# import tensorflow as tf
-# hello = tf.constant('Hello, TensorFlow!')
-# sess = tf.Session()
-# print(sess.run(hello))
-
 echo "Installation finished!"
 
 echo "Creating conda environment ..."
@@ -16,3 +10,5 @@ conda create -n dl python=3.7 -y
 conda activate dl
 conda install tensorflow-gpu keras pytorch torchvision cudatoolkit notebook ipykernel -y --name dl
 ipython kernel install --user --name="dl"
+
+conda install -c conda-forge earthengine-api -y
