@@ -9,8 +9,8 @@ sudo rstudio-server start
 sudo systemctl enable rstudio-server
 gem update --user-install
 gem install jekyll --user-install
-echo "add $HOME/.gem/ruby/2.6.0/bin to system PATH"
-echo "export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin" >> ~/.bashrc
+echo "add $HOME/.gem/ruby/2.7.0/bin to system PATH"
+echo "export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin" >> ~/.bashrc
 source ~/.bashrc
 
 # echo "Installing Anaconda ..."
@@ -28,10 +28,10 @@ yay -S pycharm-professional --noconfirm
 sudo chmod 777 -R /opt/pycharm-professional/
 
 echo "Creating conda environment ..."
-conda create -n py37 python=3.7 -y
-conda activate py37
-conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py37
-ipython kernel install --user --name="py37"
+conda create -n py38 python=3.8 -y
+conda activate py38
+conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py38
+ipython kernel install --user --name="py38"
 
 conda create -n py27 python=2.7 -y
 conda activate py27
