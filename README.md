@@ -4,7 +4,7 @@
 
 **Shell scripts for setting up [Manjaro Linux](https://manjaro.org/get-manjaro/) for Python programming and deep learning**
 
-Author: Qiusheng Wu (<https://wetlands.io> | <https://lidarblog.com)>
+Author: Qiusheng Wu (<https://wetlands.io>)
 
 ## How to use these shell scripts?
 
@@ -26,16 +26,16 @@ Author: Qiusheng Wu (<https://wetlands.io> | <https://lidarblog.com)>
 - Cloud backup: dropbox insync onedrive
 - Remote desktop: teamviewer anydesk nomachine krdc remmina
 - FTP client: filezilla
-- Email clients: mailspring wavebox-bin
+- Email clients: mailspring wavebox
 - ISO files: etcher furiusisomount xfburn, woeusb
 - Image editor: gimp pinta krita
 - Vector editor: inkscape
 - Screen recorder: peek flameshot obs-studio
 - PDF editor: masterpdfeditor-free gscan2pdf pdfarranger moonshiner pdfchain
-- Chat: skypeforlinux-stable-bin electronic-wechat zoom
+- Chat: skypeforlinux-stable-bin electronic-wechat zoom slack-desktop
 - Wallpaper: variety
 - Pandora Radio client: pithos
-- Media server: plex-media-server
+- Media server: plex-media-server rhythmbox
 - E-book reader: calibre
 - Virtual machine: virtualbox crossover
 - Firewall: gufw

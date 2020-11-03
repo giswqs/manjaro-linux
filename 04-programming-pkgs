@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing the following programming packages:"
-pkgs="r rstudio-desktop-bin rstudio-server-bin ruby ruby-rdoc visual-studio-code-bin bazel"
+pkgs="r rstudio-desktop-bin rstudio-server-bin ruby ruby-rdoc visual-studio-code-bin bazel google-cloud-sdk heroku-cli ngrok-bin"
 echo $pkgs
 yay -S $pkgs --noconfirm
 
@@ -23,19 +23,19 @@ echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/et
 sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 source ~/.bashrc
 
-echo "Installing PyCharm ..."
-yay -S pycharm-professional --noconfirm
-sudo chmod 777 -R /opt/pycharm-professional/
+# echo "Installing PyCharm ..."
+# yay -S pycharm-professional --noconfirm
+# sudo chmod 777 -R /opt/pycharm-professional/
 
-echo "Creating conda environment ..."
-conda create -n py38 python=3.8 -y
-conda activate py38
-conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py38
-ipython kernel install --user --name="py38"
+# echo "Creating conda environment ..."
+# conda create -n py38 python=3.8 -y
+# conda activate py38
+# conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py38
+# ipython kernel install --user --name="py38"
 
-conda create -n py27 python=2.7 -y
-conda activate py27
-conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py27
-ipython kernel install --user --name="py27"
+# conda create -n py27 python=2.7 -y
+# conda activate py27
+# conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py27
+# ipython kernel install --user --name="py27"
 
 echo "Installation finished!"

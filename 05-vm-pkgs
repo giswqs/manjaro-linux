@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing virtualbox ..."
-yay -S virtualbox linux57-virtualbox-host-modules virtualbox-ext-oracle icaclient --noconfirm
+yay -S virtualbox linux59-virtualbox-host-modules virtualbox-ext-oracle icaclient --noconfirm
 sudo /sbin/rcvboxdrv setup
 sudo gpasswd -a $USER vboxusers
 
