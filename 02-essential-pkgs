@@ -5,7 +5,7 @@ gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
 echo "Installing the following essential packages:"
 
-pkgs="softmaker-office-2018-bin xorg-xkill anydesk debtap filezilla flameshot obs-studio wavebox gedit google-chrome brave gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher woeusb peek pinta dropbox insync furiusisomount xfburn gcc-fortran"
+pkgs="softmaker-office-2018-bin xorg-xkill anydesk debtap filezilla flameshot obs-studio wavebox gedit google-chrome brave gufw hardinfo jre nomachine notepadqq plasma5-applets-eventcalendar rar etcher woeusb peek pinta kdenlive dropbox insync furiusisomount xfburn gcc-fortran"
 
 echo $pkgs
 
