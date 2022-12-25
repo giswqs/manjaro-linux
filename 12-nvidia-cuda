@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Installing video driver"
-yay -S linux519-nvidia-470xx nvidia-utils --noconfirm  
+yay -S linux61-nvidia-470xx nvidia-utils --noconfirm  
 nvidia-smi
 
 echo "Installing cuda and cudnn ..."
-# pkgs="linux519-nvidia nvidia-utils cuda cudnn"
+# pkgs="linux61-nvidia nvidia-utils cuda cudnn"
 pkgs="cuda cudnn"
 echo $pkgs
 yay -S $pkgs --noconfirm
@@ -22,6 +22,6 @@ nvcc --version
 cat /opt/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2
 
 # echo "Ignore packages upgrade ..."
-# sudo echo "IgnorePkg = cudnn cuda linux519-nvidia" >> /etc/pacman.conf
+# sudo echo "IgnorePkg = cudnn cuda linux61-nvidia" >> /etc/pacman.conf
 
 echo "Installation finished!"
