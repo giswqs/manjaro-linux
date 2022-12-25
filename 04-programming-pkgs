@@ -1,41 +1,19 @@
 #!/bin/bash
 
 echo "Installing the following programming packages:"
-pkgs="r rstudio-desktop-bin rstudio-server-bin ruby ruby-rdoc visual-studio-code-bin bazel google-cloud-sdk heroku-cli ngrok-bin"
+pkgs="r rstudio-desktop-bin ruby ruby-rdoc visual-studio-code-bin bazel google-cloud-sdk"
 echo $pkgs
 yay -S $pkgs --noconfirm
 
-sudo rstudio-server start
-sudo systemctl enable rstudio-server
 gem update --user-install
 gem install jekyll --user-install
-echo "add $HOME/.gem/ruby/2.7.0/bin to system PATH"
-echo "export PATH=$PATH:$HOME/.gem/ruby/2.7.0/bin" >> ~/.bashrc
+echo "add $HOME/.gem/ruby/3.0.4/bin to system PATH"
+echo "export PATH=$PATH:$HOME/.gem/ruby/3.0.4/bin" >> ~/.bashrc
 source ~/.bashrc
 
-# echo "Installing Anaconda ..."
-# yay -S anaconda --noconfirm
-# echo "export PATH=$PATH:/opt/anaconda/bin" >> ~/.bashrc
-# source ~/.bashrc
-# anaconda --version && conda --version
 yay -S miniconda3 --noconfirm
 echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc
 sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
 source ~/.bashrc
-
-# echo "Installing PyCharm ..."
-# yay -S pycharm-professional --noconfirm
-# sudo chmod 777 -R /opt/pycharm-professional/
-
-# echo "Creating conda environment ..."
-# conda create -n py38 python=3.8 -y
-# conda activate py38
-# conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py38
-# ipython kernel install --user --name="py38"
-
-# conda create -n py27 python=2.7 -y
-# conda activate py27
-# conda install numpy matplotlib pandas scipy scikit-learn scikit-image h5py notebook ipykernel -y --name py27
-# ipython kernel install --user --name="py27"
 
 echo "Installation finished!"

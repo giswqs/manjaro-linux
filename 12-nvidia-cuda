@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing video driver"
-yay -S linux61-nvidia nvidia-utils --noconfirm  
+yay -S nvidia-utils --noconfirm
 nvidia-smi
 
 echo "Installing cuda and cudnn ..."

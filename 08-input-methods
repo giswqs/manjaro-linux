@@ -14,3 +14,5 @@ echo "export QT_IM_MODULE=fcitx" >> ~/.xprofile
 echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 
 echo "Installation finished!"
+
+echo "System Settings - Regional Settings - Input Method - Uncheck Only Show Current Language - Select WubiPinyin - Global Config - Trigger Input Method - Shift + Space"

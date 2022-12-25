@@ -1,25 +1,11 @@
 #!/bin/bash
 
-echo "Add Dropbox key:"
-gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
-
 echo "Installing the following essential packages:"
 
-pkgs="softmaker-office-2021-bin xorg-xkill anydesk debtap filezilla flameshot ksnip obs-studio wavebox gedit google-chrome brave gufw hardinfo jre notepadqq plasma5-applets-eventcalendar rar etcher woeusb peek pinta kdenlive dropbox insync furiusisomount gcc-fortran"
+pkgs="softmaker-office-2021-bin xorg-xkill anydesk-bin filezilla flameshot ksnip obs-studio wavebox gedit gufw hardinfo jre notepadqq plasma5-applets-eventcalendar rar etcher-bin peek pinta kdenlive gcc-fortran rustup zoom"
 
 echo $pkgs
 
 yay -S $pkgs --noconfirm
-
-# disable brave browser message
-sudo sysctl kernel.unprivileged_userns_clone=1
-echo kernel.unprivileged_userns_clone = 1 | sudo tee /etc/sysctl.d/00-local-userns.conf
-
-echo "sudo sysctl fs.inotify.max_user_instances=256" > ./30-dropbox.conf
-echo "sudo sysctl fs.inotify.max_user_watches=1048576" >> ./30-dropbox.conf
-echo "sudo sysctl fs.inotify.max_user_instances=256" > ./50-max_user_watches.conf
-echo "sudo sysctl fs.inotify.max_user_watches=1048576" >> ./50-max_user_watches.conf
-sudo mv ./30-dropbox.conf /etc/sysctl.d/30-dropbox.conf
-sudo mv ./50-max_user_watches.conf /etc/sysctl.d/50-max_user_watches.conf
 
 echo "Installation finished!"
