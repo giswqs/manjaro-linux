@@ -2,7 +2,7 @@
 
 echo "Installing the following essential packages:"
 
-pkgs="softmaker-office-2024-bin xorg-xkill anydesk-bin screenkey filezilla flameshot ksnip obs-studio wavebox gedit gufw hardinfo jre notepadqq plasma5-applets-eventcalendar rar etcher-bin peek pinta kdenlive gcc-fortran rustup zoom icaclient"
+pkgs="softmaker-office-2024-bin xorg-xkill anydesk-bin screenkey filezilla flameshot ksnip obs-studio wavebox gedit gufw hardinfo jre notepadqq plasma5-applets-eventcalendar rar etcher-bin peek pinta kdenlive gcc-fortran rustup zoom icaclient elisa"
 
 echo $pkgs
 
