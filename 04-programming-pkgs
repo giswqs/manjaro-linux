@@ -5,15 +5,16 @@ pkgs="r rstudio-desktop-bin ruby ruby-rdoc visual-studio-code-bin bazel google-c
 echo $pkgs
 yay -S $pkgs --noconfirm
 
-gem update --user-install
-gem install jekyll --user-install
-echo "add $HOME/.gem/ruby/3.0.4/bin to system PATH"
-echo "export PATH=$PATH:$HOME/.gem/ruby/3.0.4/bin" >> ~/.bashrc
-source ~/.bashrc
-
 yay -S miniconda3 --noconfirm
-echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh" >> ~/.bashrc
-sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
-source ~/.bashrc
 
 echo "Installation finished!"
+
+echo "git config --global user.name 'Your Name'"
+echo "git config --global user.email '"you@someplace.com"'
+echo "git config --global credential.helper store"
+
+echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh" >> ~/.zshrc
+sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
+source ~/.zshrc
+
+echo "conda config --set auto_activate_base false"

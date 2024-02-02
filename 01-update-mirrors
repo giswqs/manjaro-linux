@@ -5,7 +5,7 @@ sudo pacman -S yay pamac --noconfirm
 sudo pacman -Syyu --noconfirm
 yay -Syyua --noconfirm
 
-yay -S timeshift gnome-disk-utility stacer-bin --noconfirm
+yay -S gnome-disk-utility stacer-bin --noconfirm
 
 sudo mkdir -p /media/hdd
 sudo chmod -R 777 /media/hdd
@@ -13,13 +13,12 @@ echo "mount hard drive to /media/hdd using gnome-disk-utility"
 echo "disk - select hard disk - settings - edit mount options - mount point - media/hdd"
 
 echo "System Settings - Appearance - Breeze Dark"
-echo "System Seetings - Startup and Shutdown - Desktop Session - Uncheck Confirm logout and offer shutdown options"
+echo "System Seetings - Startup and Shutdown - Desktop Session - Uncheck Confirm logout and offer shutdown options and Start with an empty session"
 
 echo "Backup system using timeshift"
 
 yay -S google-chrome --noconfirm
 yay -Sy base-devel --noconfirm
-yay -S linux61 linux61-headers linux61-nvidia --noconfirm
 
 echo "Add/Remove Software - Settings - ThirdParty - Enable AUR support - Check for updates"
 
