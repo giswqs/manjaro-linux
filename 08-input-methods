@@ -2,7 +2,7 @@
 
 echo "Installing input methods ..."
 
-pkgs="adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts fcitx kcm-fcitx fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 fcitx-ui-light fcitx-table-other"
+pkgs="adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts fcitx kcm-fcitx fcitx-gtk2 fcitx-gtk3 fcitx-qt4 fcitx-qt5 fcitx-ui-light fcitx-table-other fcitx-configtool"
 
 echo $pkgs
 
@@ -15,4 +15,4 @@ echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 
 echo "Installation finished!"
 
-echo "System Settings - Regional Settings - Input Method - Uncheck Only Show Current Language - Select WubiPinyin - Global Config - Trigger Input Method - Shift + Space"
+echo "Run fcitx-config-gtk3 - Add Input Method - Uncheck Only Show Current Language - Select WubiPinyin - Global Config - Trigger Input Method - Shift + Space"
