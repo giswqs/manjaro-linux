@@ -1,3 +1,5 @@
 echo "Go to Settings - Hardware Configuration - Install video-nvidia"
 echo "Go to Settings - Kernel - Install linux-lts"
 echo "Backup the system using timeshift"
+
+yay -S nvtop --noconfirm
