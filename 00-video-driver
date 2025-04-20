@@ -1,5 +1,8 @@
+#!/bin/bash
 echo "Go to Settings - Hardware Configuration - Install video-nvidia"
 echo "Go to Settings - Kernel - Install linux-lts"
 echo "Backup the system using timeshift"
 
+sudo pacman -S yay --noconfirm
 yay -S nvtop --noconfirm
+

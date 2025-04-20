@@ -2,14 +2,10 @@
 
 echo "Installing the following optional packages:"
 
-pkgs="solaar neofetch calibre gimp krita gscan2pdf pdfarranger moonshiner inkscape xnconvert handbrake libreoffice-extension-languagetool masterpdfeditor-free remmina skypeforlinux-stable-bin teamviewer ttf-ms-fonts slack-desktop youtube-dl-gui-git rhythmbox uxplay"
+pkgs="solaar neofetch calibre gimp krita gscan2pdf pdfarranger moonshiner inkscape xnconvert handbrake libreoffice-extension-languagetool remmina ttf-ms-fonts slack-desktop rhythmbox uxplay"
 
 echo $pkgs
 
 yay -S $pkgs --noconfirm
-
-sudo teamviewer --daemon enable
-sudo teamviewer --daemon start
-sudo systemctl enable teamviewerd
 
 echo "Installation finished!"

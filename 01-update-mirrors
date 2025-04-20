@@ -1,7 +1,6 @@
 #!/bin/bash
 sudo pacman-mirrors --country United_States
 sudo pacman-mirrors -f 0
-sudo pacman -S yay pamac --noconfirm
 sudo pacman -Syyu --noconfirm
 yay -Syyua --noconfirm
 

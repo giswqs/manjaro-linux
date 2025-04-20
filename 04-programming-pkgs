@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Installing the following programming packages:"
-pkgs="r rstudio-desktop-bin ruby ruby-rdoc visual-studio-code-bin bazel google-cloud-sdk"
+pkgs="ruby ruby-rdoc visual-studio-code-bin bazel google-cloud-sdk"
 echo $pkgs
 yay -S $pkgs --noconfirm
 

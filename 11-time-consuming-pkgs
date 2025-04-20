@@ -2,7 +2,7 @@
 
 echo "Installing the following optional packages:"
 
-pkgs="pithos gnome-keyring pdfchain pdfstudio motrix"
+pkgs="obs-studio-git"
 
 echo $pkgs
 
