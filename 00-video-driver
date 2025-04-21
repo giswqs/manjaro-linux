@@ -2,6 +2,7 @@
 echo "Go to Settings - Hardware Configuration - Install video-nvidia"
 echo "Go to Settings - Kernel - Install linux-lts"
 echo "Backup the system using timeshift"
+echo "Go to manjaro-settings-manager to install nvidia driver"
 
 sudo pacman -S yay --noconfirm
 yay -S nvtop --noconfirm

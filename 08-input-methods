@@ -16,3 +16,5 @@ echo "export XMODIFIERS=@im=fcitx" >> ~/.xprofile
 echo "Installation finished!"
 
 echo "Run fcitx-config-gtk3 - Add Input Method - Uncheck Only Show Current Language - Select WubiPinyin - Global Config - Trigger Input Method - Shift + Space"
+
+echo "If fcitx does not work, install ibus-pinyin"
