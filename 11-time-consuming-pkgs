@@ -2,10 +2,12 @@
 
 echo "Installing the following optional packages:"
 
-pkgs="obs-studio-git"
+pkgs="obs-studio-git python-obsws screenkey obs-advanced-masks obs-backgroundremoval obs-advanced-masks obs-shaderfilter obs-stroke-glow-shadow obs-composite-blur obs-3d-effect obs-downstream-keyer obs-source-clone obs-move-transition obs-multi-rtmp-git obs-plugin-input-overlay touchportal-appimage" 
 
 echo $pkgs
 
 yay -S $pkgs --noconfirm
+
+sudo pacman -S v4l2loopback-dkms linux612-headers --noconfirm
 
 echo "Installation finished!"
