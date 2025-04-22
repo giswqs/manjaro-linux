@@ -9,3 +9,7 @@ echo $pkgs
 yay -S $pkgs --noconfirm
 
 echo "Installation finished!"
+
+sudo systemctl enable tailscaled 
+sudo systemctl start tailscaled
+echo "sudo tailscale up"
