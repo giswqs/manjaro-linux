@@ -14,15 +14,3 @@ rm ~/miniconda3/miniconda.sh
 ~/miniconda3/bin/conda init zsh
 
 echo "Installation finished!"
-
-source ~/.zshrc
-
-git config --global user.name "Qiusheng Wu"
-git config --global user.email "giswqs@gmail.com"
-git config --global credential.helper store
-conda config --set auto_activate_base false
-
-# echo "[ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh" >> ~/.zshrc
-# sudo ln -s /opt/miniconda3/etc/profile.d/conda.sh /etc/profile.d/conda.sh
-# source ~/.zshrc
-
