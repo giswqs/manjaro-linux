@@ -10,3 +10,9 @@ conda create -n qgis python=3.12 -y
 conda activate qgis && mamba install -c conda-forge libgdal-arrow-parquet pyarrow gdal qgis pygis jupyterlab -y
 conda activate qgis && mamba update -c conda-forge sqlite -y
 cp ~/miniconda3/envs/qgis/lib/libsqlite3.so.3.49.1 ~/miniconda3/envs/qgis/lib/libsqlite3.so
+
+
+conda create -n geo python=3.12 -y
+conda activate geo && mamba install -c conda-forge libgdal-arrow-parquet pyarrow gdal geoai jupyterlab -y
+conda activate geo && mamba update -c conda-forge sqlite -y
+cp ~/miniconda3/envs/geo/lib/libsqlite3.so.3.49.1 ~/miniconda3/envs/geo/lib/libsqlite3.so

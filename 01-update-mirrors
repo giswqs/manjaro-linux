@@ -11,11 +11,6 @@ sudo chmod -R 777 /media/hdd
 echo "mount hard drive to /media/hdd using gnome-disk-utility"
 echo "disk - select hard disk - settings - edit mount options - mount point - media/hdd"
 
-echo "System Settings - Appearance - Breeze Dark"
-echo "System Seetings - Startup and Shutdown - Desktop Session - Uncheck Confirm logout and offer shutdown options and Start with an empty session"
-
-echo "Backup system using timeshift"
-
 yay -S google-chrome --noconfirm
 yay -Sy base-devel --noconfirm
 

@@ -43,3 +43,14 @@ Author: Qiusheng Wu (<https://wetlands.io>)
 - Math: mathpix-snipping-tool
 - Geospatial: google-earth qgis saga-gis
 - Download manager: motrix
+
+## Installation
+
+Choose erase disk and the BTRFS file system.
+
+## Settings
+
+- Choose Breath Dark theme: System Settings >Quick Settings >Breath Dark
+- Disable log out confirmation: System Settings >System >Session >Desktop Sesssion >Uncheck "Ask for confirmation" >On login, Start with an empty session
+- Enable AUR: Pamac >Preferences >Third Party >Enable AUR support > Check for updates
+- Change terminal shortcut: Konslole >Settings >Configure Keyboard Shortcuts > Search Paster >Custom Shortcut >Ctrl+V

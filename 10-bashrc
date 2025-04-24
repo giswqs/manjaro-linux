@@ -1,27 +1,55 @@
 #!/bin/bash
 
-echo "alias up='yay -Syyua'"  >> ~/.bashrc
-echo "alias ug='yay -Sua --noconfirm'" >> ~/.bashrc
-echo "alias gpu='watch -n 1 nvidia-smi'"  >> ~/.bashrc
-echo "alias py38='conda activate py38'" >> ~/.bashrc
-echo "alias py27='conda activate py27'" >> ~/.bashrc
-echo "alias pygeo='conda activate pygeo'" >> ~/.bashrc
-echo "alias pytest='conda activate pytest'" >> ~/.bashrc
-echo "alias arcgis='conda activate arcgis'" >> ~/.bashrc
-echo "alias nb='jupyter notebook'" >> ~/.bashrc
-echo "alias pdf2doc='soffice --infilter=\"writer_pdf_import\" --convert-to doc'" >> ~/.bashrc
-echo "alias touchall='find  -type f  -exec touch {} +'" >> ~/.bashrc
-echo "alias jk='jekyll serve --watch --port 8000'" >> ~/.bashrc
-echo "alias hi='function hdi(){ howdoi \$* -c -n 5; }; hdi'" >> ~/.bashrc
-echo "alias eb='gedit ~/.bashrc'" >> ~/.bashrc
-echo "alias sb='source ~/.bashrc'" >> ~/.bashrc
-echo "alias la='du -ah . | grep -v \"/$\" | sort -h'" >> ~/.bashrc
-echo "alias ld='du -a -h --max-depth=1 | sort -h'" >> ~/.bashrc
-echo "alias lf='ls -1Rhs | sed -e \"s/^ *//\" | grep \"^[0-9]\" | sort -h'" >> ~/.bashrc
-# alias listfiles='ls -1Rhs | sed -e "s/^ *//" | grep "^[0-9]" | sort -h'
-# echo "alias unzipall='for i in *.zip; do unzip \"$i\" -d \"${i%%.zip}\"; done'" >> ~/.bashrc
-# alias unzipall='for i in *.zip; do unzip "$i" -d "${i%%.zip}"; done'
-# echo "alias touchall='find  -exec touch {} +'" >> ~/.bashrc
-#echo "Ignore packages upgrade ..."
-#sudo echo "IgnorePkg = cudnn cuda linux414-nvidia linux415-nvidia" >> /etc/pacman.conf
-source ~/.bashrc
+cat << 'EOF' >> ~/.zshrc
+
+# Custom aliases and functions
+alias listfiles='ls -1Rhs | sed -e "s/^ //" | grep "^[0-9]" | sort -h'
+alias listdirs='du -a -h --max-depth=1 | sort -h'
+alias listall='du -ah . | grep -v "/$" | sort -h'
+alias cs='codespell --skip=".csv,.geojson,.json,.js,.html,cff,./.git/" --ignore-words-list="aci,acount,acounts,fallow,hart,hist,nd,ned,ois,wqs,watermask"'
+alias s7='ffmpeg -i input.mp4 -filter:v "setpts=0.7PTS" output.mp4'
+alias s5='ffmpeg -i input.mp4 -filter:v "setpts=0.5PTS" output.mp4'
+alias mkv='ffmpeg -i $input -c copy ${input/mkv/mp4}'
+alias mp4='ffmpeg -i ${input/mkv/mp4} ${input/mkv/gif}'
+alias duration='ffprobe -i $input -show_format | grep duration | cut -d"=" -f 2'
+alias spup='ffmpeg -i ${input/mkv/mp4} -filter:v "setpts=$SPEEDPTS" ${input/.mkv/_speed.mp4}'
+alias trim='ffmpeg -y -i ${input/.mkv/_speed.mp4} -to "$(echo "$(duration)*$SPEED" | bc)" -c copy ${input/.mkv/.mp4}'
+alias speedup='mkv;spup;trim'
+alias m2p='ffmpeg -i $input -vf fps=$FPS,scale=$SCALE:-1:flags=lanczos,palettegen ${input/mp4/png}'
+alias m2g='ffmpeg -i $input -i ${input/mp4/png} -filter_complex "fps=$FPS,scale=$SCALE:-1:flags=lanczos[x];[x][1:v]paletteuse" ${input/mp4/gif}'
+alias gif='ffmpeg -i $input -vf fps=$FPS,scale=$SCALE:-1:flags=lanczos,palettegen ${input/mp4/png} && ffmpeg -i $input -i ${input/mp4/png} -filter_complex "fps=$FPS,scale=$SCALE:-1:flags=lanczos[x];[x][1:v]paletteuse" ${input/mp4/gif}'
+alias filelist="for f in *.mp4 ; do echo file '\$f'; done >> fileList.txt;"
+alias merge='ffmpeg -f concat -safe 0 -i fileList.txt -c copy mergedVideo.mp4'
+alias gif2mp4='ffmpeg -i $input -movflags faststart -pix_fmt yuv420p -vf "scale=trunc(iw/2)*2:trunc(ih/2)*2" ${input/gif/mp4}'
+alias bl='black -S .'
+alias bookpdf='jupyter-book build . --builder pdfhtml'
+alias geeup='bash /media/hdd/Dropbox/git/bash/geebook.sh'
+alias delbr='git branch | grep -v "master|main" | xargs git branch -D '
+alias geo='conda activate geo'
+alias book='conda activate book'
+alias bb='rm -rf _build/ && jupyter-book build .'
+alias lab='jupyter lab'
+alias nb='jupyter notebook'
+alias mdnb='jupytext --to ipynb *.md && rmid'
+alias md2nb='cd chapters && jupytext --to ipynb *.md && rmid'
+alias touchall='find . -exec touch {} +'
+alias pc='bl && pre-commit run --all-files'
+alias d1m='find -type -size +1M -delete'
+alias r1080='xrandr --output DP-0 --mode 1920x1080'
+alias r2560='xrandr --output DP-0 --mode 2560x1440'
+alias ht='qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "panels()[0].hiding = \"autohide\""'
+alias st='qdbus org.kde.plasmashell /PlasmaShell org.kde.PlasmaShell.evaluateScript "panels()[0].hiding = \"none\""'
+alias rc='r1080 && ht'
+alias nm='r2560 && st'
+alias startvpn='sudo tailscale set --exit-node=xxx.xxx.xx.xx'
+alias stopvpn='sudo tailscale up --exit-node='
+alias scale='kquitapp5 plasmashell && kstart5 plasmashell'
+alias qgis='conda activate qgis && qgis'
+
+rmid() {
+  sed -i -e '/"id": /d' *.ipynb && sed -i -e '/"attachments": /d' *.ipynb
+}
+
+EOF
+
+source ~/.zshrc
