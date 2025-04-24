@@ -2,7 +2,14 @@
 
 echo "Installing the following essential packages:"
 
-pkgs="softmaker-office-2024-bin xorg-xkill screenkey filezilla flameshot ksnip wavebox gedit gufw hardinfo jre etcher-bin peek pinta kdenlive gcc-fortran zoom icaclient elisa obsidian bc rustdesk-bin tailscale tailscaledesktop"
+pkgs="qt5-tools"
+
+echo $pkgs
+
+sudo pacman -S $pkgs --noconfirm
+
+
+pkgs="softmaker-office-2024-bin xorg-xkill screenkey filezilla flameshot ksnip wavebox gedit gufw hardinfo jre etcher-bin peek pinta kdenlive gcc-fortran zoom icaclient elisa obsidian bc rustdesk-bin tailscale tailscaledesktop fsearch"
 
 echo $pkgs
 
