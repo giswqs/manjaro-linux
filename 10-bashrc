@@ -45,7 +45,10 @@ alias startvpn='sudo tailscale set --exit-node=xxx.xxx.xx.xx'
 alias stopvpn='sudo tailscale up --exit-node='
 alias scale='kquitapp5 plasmashell && kstart5 plasmashell'
 alias qgis='conda activate qgis && qgis'
-
+alias findcon='find . -type f -name "*conflicted*"'
+alias delcon='find . -type f -name "*conflicted*" -exec rm {} +'
+alias finddup='find . -type f -name "*([0-9])*"'
+alias deldup='find . -type f -name "*([0-9])*" -exec rm {} +'
 rmid() {
   sed -i -e '/"id": /d' *.ipynb && sed -i -e '/"attachments": /d' *.ipynb
 }
