@@ -5,7 +5,7 @@ gpg --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 
 echo "Installing the following essential packages:"
 
-yay -S dropbox insync --noconfirm
+yay -S dropbox insync syncthing-bin syncthingdesktop syncthing-gtk syncthing-discosrv --noconfirm
 
 echo "sudo sysctl fs.inotify.max_user_instances=256" > ./30-dropbox.conf
 echo "sudo sysctl fs.inotify.max_user_watches=1048576" >> ./30-dropbox.conf
